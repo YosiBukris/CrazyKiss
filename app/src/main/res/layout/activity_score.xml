@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/startbackground"
+    tools:context=".Score">
+
+    <TextView
+        android:id="@+id/scoreTitle"
+        android:layout_width="match_parent"
+        android:layout_above="@id/main_scroll_view"
+        android:layout_marginBottom="50dp"
+        android:layout_height="96dp"
+        android:background="#E1E3EC"
+        android:text="   SCORE LIST"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
+
+
+            <ScrollView
+                android:id="@+id/main_scroll_view"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:background="@android:color/white">
+
+                <TableLayout
+                    android:id="@+id/table"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/btn_restart"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/score_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  Scores "
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                        </TextView>
+                    </TableRow>
+                    <TableRow >
+                        <TextView
+                            android:id="@+id/score_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                        </TextView>
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/score_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                        </TextView>
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/score_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                        </TextView>
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/score_05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                        </TextView>
+                    </TableRow>
+                </TableLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/backBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/main_scroll_view"
+                android:layout_marginLeft="130dp"
+                android:text="BACK" />
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/startbackground"
+    tools:context=".Start">
+
+
+    <LinearLayout
+        android:id="@+id/mainLinear"
+        android:layout_width="match_parent"
+        android:layout_height="365dp"
+        android:layout_marginTop="272dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="11dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Crazy Kiss"
+            android:layout_marginLeft="50dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textColor="@color/colorAccent"
+            android:shadowColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/newGameBTN"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:text="new Game" />
+
+        <Button
+            android:id="@+id/scoreBTN"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+
+            android:layout_height="wrap_content"
+            android:text="score list" />
+
+        <Button
+            android:id="@+id/aboutBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="about" />
+
+        <Button
+            android:id="@+id/exitBTN"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="exit" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/kiss" />
+    </LinearLayout>
+
+</RelativeLayout>

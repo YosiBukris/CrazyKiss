@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".GameOver">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="287dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="30dp"
+        android:text="Game Over"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/layout1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="@android:color/holo_red_light"
+        android:shadowColor="@android:color/white"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="477dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/scoreLBL"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:textSize="45dp"
+            android:paddingLeft="20dp"
+            android:textColor="@android:color/white"
+            android:textStyle="italic|bold|normal"
+            android:background="@android:drawable/dark_header"
+             />
+
+        <Button
+            android:id="@+id/newGameBTN1"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="50dp"
+            android:text="new game" />
+
+        <Button
+            android:id="@+id/mainMenuBTN1"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:text="main menu" />
+
+        <Button
+            android:id="@+id/exitBTN1"
+            android:layout_width="106dp"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:text="exit game" />
+
+        <ImageView
+            android:id="@+id/kissLogo"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/kiss" />
+    </LinearLayout>
+
+
+</RelativeLayout>

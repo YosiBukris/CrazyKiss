@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/startbackground">
+
+        <TextView
+            android:id="@+id/aboutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:background="#E1E3EC"
+            android:text=" About Crazy Kiss"
+            android:textStyle="italic|bold|normal"
+            android:textAlignment="center"
+            android:textSize="45dp"
+             />
+            <TextView
+                android:id="@+id/Details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:background="@android:color/darker_gray"
+                android:text=" Coded by Yosi Bukris \n Afeka college \n Tel Aviv \n 2019"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                />
+
+        <Button
+            android:id="@+id/backBTN1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="130dp"
+            android:text="BACK" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
