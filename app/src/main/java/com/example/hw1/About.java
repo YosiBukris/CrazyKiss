@@ -19,8 +19,7 @@ public class About extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent menuIntent = new Intent(About.this, Start.class);
-                startActivity(menuIntent);
+                finish();
             }
         });
     }

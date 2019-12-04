@@ -40,7 +40,6 @@ public class Score extends AppCompatActivity {
     }
 
     public void goToMenu(){
-        Intent menuIntent = new Intent(this, Start.class);
-        startActivity(menuIntent);
+        finish();
     }
 }
