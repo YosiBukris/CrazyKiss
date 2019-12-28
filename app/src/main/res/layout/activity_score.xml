@@ -1,101 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="portrait"
     android:background="@drawable/startbackground"
     tools:context=".Score">
 
     <TextView
         android:id="@+id/scoreTitle"
         android:layout_width="match_parent"
-        android:layout_above="@id/main_scroll_view"
-        android:layout_marginBottom="50dp"
-        android:layout_height="96dp"
-        android:background="#E1E3EC"
-        android:text="   SCORE LIST"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
+        android:layout_height="wrap_content"
+        android:shadowColor="@android:color/white"
+        android:text="Score List"
+        android:textSize="70dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"/>
 
+    <TableLayout
+        android:id="@+id/allScore_TBL_tableScore"
+        android:layout_marginTop="60dp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/scoreTitle">
 
-            <ScrollView
-                android:id="@+id/main_scroll_view"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:layout_centerInParent="true"
+        <TableRow
+            android:id="@+id/allScore_TBL_tableRowScore"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+            <TextView
+                android:text="Name"
+                android:textSize="25dp"
                 android:gravity="center"
-                android:background="@android:color/white">
-
-                <TableLayout
-                    android:id="@+id/table"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_above="@+id/btn_restart"
-                    android:layout_centerInParent="true"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_weight="1">
-
-                    <TableRow>
-                        <TextView
-                            android:id="@+id/score_01"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="  Scores "
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:layout_weight="1">
-                        </TextView>
-                    </TableRow>
-                    <TableRow >
-                        <TextView
-                            android:id="@+id/score_02"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:layout_weight="1">
-                        </TextView>
-                    </TableRow>
-                    <TableRow>
-                        <TextView
-                            android:id="@+id/score_03"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:layout_weight="1">
-                        </TextView>
-                    </TableRow>
-                    <TableRow>
-                        <TextView
-                            android:id="@+id/score_04"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:layout_weight="1">
-                        </TextView>
-                    </TableRow>
-                    <TableRow>
-                        <TextView
-                            android:id="@+id/score_05"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:layout_weight="1">
-                        </TextView>
-                    </TableRow>
-                </TableLayout>
-            </ScrollView>
+                android:layout_marginRight="7dp"
+                android:textColor="#FFFFFF"></TextView>
+            <TextView
+                android:text="Score"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:layout_marginRight="7dp"
+                android:textColor="#FFFFFF"></TextView>
+            <TextView
+                android:text="Location"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:layout_marginRight="7dp"
+                android:textColor="#FFFFFF">
+            </TextView>
 
             <Button
-                android:id="@+id/backBTN"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="50dp"
-                android:layout_below="@id/main_scroll_view"
-                android:layout_marginLeft="130dp"
-                android:text="BACK" />
+                android:background="@drawable/worldwide"
+                android:layout_width="10dp"
+                android:layout_height="25dp">
+            </Button>
+        </TableRow>
+        <TableRow
+            android:gravity="center">
+            <TextView
+                android:textSize="17dp"
+                android:gravity="center"
+                android:id="@+id/allScore_TBL_tableRowScore1"
+                android:layout_height="35dp"
+                android:textColor="#FFFFFF"></TextView>
+            <TextView
+                android:id="@+id/allScore_TBL_tableRowScore1_1"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:textColor="#FFFFFF"></TextView>
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="35dp"
+                android:id="@+id/allScore_TBL_tableRowScore1_2"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:background="@android:color/transparent"
+                android:textColor="#FFFFFF">
+            </TextView>
+            <Button
+                android:id="@+id/allScore_BTN_tableRowScore1_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/location"></Button>
+        </TableRow>
+
+        <TableRow
+            android:gravity="center">
+            <TextView
+                android:id="@+id/allScore_TBL_tableRowScore2"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:textColor="#FFFFFF"></TextView>
+            <TextView
+                android:id="@+id/allScore_TBL_tableRowScore2_1"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:textColor="#FFFFFF"></TextView>
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="35dp"
+                android:id="@+id/allScore_TBL_tableRowScore2_2"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:background="@android:color/transparent"
+                android:textColor="#FFFFFF"></TextView>
+            <Button
+                android:id="@+id/allScore_BTN_tableRowScore2_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/location"></Button>
+        </TableRow>
+        <TableRow
+            android:gravity="center">
+            <TextView
+                android:id="@+id/allScore_TBL_tableRowScore3"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:textColor="#FFFFFF"></TextView>
+            <TextView
+                android:id="@+id/allScore_TBL_tableRowScore3_1"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:textColor="#FFFFFF"></TextView>
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="35dp"
+                android:id="@+id/allScore_TBL_tableRowScore3_2"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:background="@android:color/transparent"
+                android:textColor="#FFFFFF"></TextView>
+            <Button
+                android:id="@+id/allScore_BTN_tableRowScore3_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/location"></Button>
+        </TableRow>
+        <TableRow
+            android:gravity="center">
+            <TextView
+                android:id="@+id/allScore_TBL_tableRowScore4"
+                android:textSize="17dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"></TextView>
+            <TextView
+                android:id="@+id/allScore_TBL_tableRowScore4_1"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:textColor="#FFFFFF"></TextView>
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="35dp"
+                android:id="@+id/allScore_TBL_tableRowScore4_2"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:background="@android:color/transparent"
+                android:textColor="#FFFFFF"></TextView>
+            <Button
+                android:id="@+id/allScore_BTN_tableRowScore4_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/location"></Button>
+        </TableRow>
+        <TableRow
+            android:gravity="center">
+            <TextView
+                android:id="@+id/allScore_TBL_tableRowScore5"
+                android:textSize="17dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"></TextView>
+            <TextView
+                android:id="@+id/allScore_TBL_tableRowScore5_1"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:textColor="#FFFFFF"></TextView>
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="35dp"
+                android:id="@+id/allScore_TBL_tableRowScore5_2"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:background="@android:color/transparent"
+                android:textColor="#FFFFFF"></TextView>
+            <Button
+                android:id="@+id/allScore_BTN_tableRowScore5_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/location"></Button>
+        </TableRow>
+        <TextView
+            android:id="@+id/allScore_TXT_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/backBTN2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/allScore_TBL_tableScore"
+        android:layout_marginLeft="130dp"
+        android:text="BACK" />
 
 </RelativeLayout>

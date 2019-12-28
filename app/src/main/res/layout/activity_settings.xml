@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:screenOrientation="portrait"
+    android:layout_height="match_parent"
+    tools:context=".About">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/startbackground">
+
+        <TextView
+            android:id="@+id/settingsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="@android:color/white"
+            android:text="Settings"
+            android:textSize="70dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"/>
+
+        <Button
+            android:id="@+id/AboutBTN1"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content"
+            android:text="About" />
+
+        <Button
+            android:id="@+id/backBTN1"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:text="BACK" />
+
+
+        <Switch
+            android:id="@+id/SwichBTN"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
+            android:shadowColor="@color/colorPrimary"
+            android:text="sensors "></Switch>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

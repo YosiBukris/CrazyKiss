@@ -4,68 +4,87 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:screenOrientation="portrait"
     android:layout_height="match_parent"
     android:background="@drawable/startbackground"
     tools:context=".Start">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shadowColor="@android:color/white"
+        android:text="Crazy Kiss"
+        android:textSize="70dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"/>
 
 
     <LinearLayout
         android:id="@+id/mainLinear"
         android:layout_width="match_parent"
-        android:layout_height="365dp"
-        android:layout_marginTop="272dp"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
         android:layout_centerInParent="true"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="11dp">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Crazy Kiss"
-            android:layout_marginLeft="50dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-            android:textColor="@color/colorAccent"
-            android:shadowColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="327dp"
+            android:layout_height="66dp"
+            android:shadowColor="@android:color/white"
+            android:hint="Enter Your Name"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:inputType="textCapSentences"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/newGameBTN"
             android:layout_width="match_parent"
-            android:layout_centerInParent="true"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
             android:text="new Game" />
 
         <Button
             android:id="@+id/scoreBTN"
             android:layout_width="match_parent"
-            android:layout_centerInParent="true"
-
             android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
             android:text="score list" />
 
         <Button
-            android:id="@+id/aboutBTN"
+            android:id="@+id/settingsBTN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="about" />
+            android:text="settings" />
 
         <Button
             android:id="@+id/exitBTN"
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="exit" />
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_centerInParent="true"
-            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/mainLinear"
             app:srcCompat="@drawable/kiss" />
     </LinearLayout>
+
+
 
 </RelativeLayout>

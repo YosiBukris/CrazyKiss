@@ -5,21 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="portrait"
     android:background="@drawable/background"
     tools:context=".GameOver">
 
     <TextView
-        android:id="@+id/title"
-        android:layout_width="287dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="30dp"
-        android:text="Game Over"
-        android:layout_centerInParent="true"
-        android:layout_above="@id/layout1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        android:textColor="@android:color/holo_red_light"
+        android:id="@+id/scoreTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:shadowColor="@android:color/white"
-        />
+        android:text="Game Over"
+        android:textSize="70dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"/>
 
     <LinearLayout
         android:id="@+id/layout1"
@@ -35,24 +35,16 @@
             android:textSize="45dp"
             android:paddingLeft="20dp"
             android:textColor="@android:color/white"
-            android:textStyle="italic|bold|normal"
+            android:textStyle="bold|normal"
             android:background="@android:drawable/dark_header"
              />
-
-        <Button
-            android:id="@+id/newGameBTN1"
-            android:layout_width="108dp"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="50dp"
-            android:text="new game" />
 
         <Button
             android:id="@+id/mainMenuBTN1"
             android:layout_width="wrap_content"
             android:layout_centerInParent="true"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:layout_marginLeft="150dp"
             android:text="main menu" />
 
