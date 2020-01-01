@@ -104,6 +104,7 @@ public class GameOver extends AppCompatActivity {
     public void goToMenu() {
         Intent menuIntent = new Intent(GameOver.this, Start.class);
         startActivity(menuIntent);
+        finish();
     }
 
     @Override
