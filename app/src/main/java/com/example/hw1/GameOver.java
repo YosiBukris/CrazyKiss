@@ -27,7 +27,7 @@ public class GameOver extends AppCompatActivity {
     private Animation logoAnim;
     private int thisScore;
     private MySharedReference msr;
-    private final String Json_Key = "ScoreHistory";
+    private final String Json_Key = "History2";
     private ScoresHistory history;
     private LocationManager locationManager;
     private LocationListener listener;
@@ -138,7 +138,5 @@ public class GameOver extends AppCompatActivity {
                 goToMenu();
             }
         });
-
     }
-
 }

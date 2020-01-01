@@ -30,16 +30,17 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Set;
 
-public class MainGame extends AppCompatActivity implements SensorEventListener{
+public class MainGame extends AppCompatActivity implements SensorEventListener {
     public static String scoreName = "score";
 
     private ValueAnimator[] animations, moneyAnim;
 
-    private ImageView player,resumeIMG, pauseIMG;
+    private ImageView player, resumeIMG, pauseIMG;
     private ImageView[] hearts, money, enemy;
 
-    private Button right,left,pause;
+    private Button right, left, pause;
 
     private boolean toResume = false;
     private MediaPlayer kissSound;
@@ -49,8 +50,8 @@ public class MainGame extends AppCompatActivity implements SensorEventListener{
     private Sensor accelerometer;
     public static boolean sensorsOn;
 
-    private int screenHeight, score = 0, heartsCount = 3,animationIndex, moneyAnimIndex;
-    private float  screenWidth, x;
+    private int screenHeight, score = 0, heartsCount = 3, animationIndex, moneyAnimIndex;
+    private float screenWidth, x;
     private final int enemyMoney = 10, walletMoney = 50;
 
     @Override
@@ -58,7 +59,6 @@ public class MainGame extends AppCompatActivity implements SensorEventListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        sensorsOn = Setting.sensorSwitch.isChecked();
 
         enemy = new ImageView[]{
                 findViewById(R.id.enemy1), findViewById(R.id.enemy2), findViewById(R.id.enemy3), findViewById(R.id.enemy4), findViewById(R.id.enemy5)
@@ -88,7 +88,7 @@ public class MainGame extends AppCompatActivity implements SensorEventListener{
             }
         });
 
-        kissSound= MediaPlayer.create(this,R.raw.kiss);
+        kissSound = MediaPlayer.create(this, R.raw.kiss);
 
         resumeIMG = findViewById(R.id.resumeIMG);
         resumeIMG.setVisibility(View.INVISIBLE);
@@ -101,7 +101,7 @@ public class MainGame extends AppCompatActivity implements SensorEventListener{
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(toResume == true)
+                if (toResume == true)
                     resumeGame();
                 else
                     pauseGame();
@@ -109,9 +109,6 @@ public class MainGame extends AppCompatActivity implements SensorEventListener{
         });
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-
-        if(sensorsOn)
-            turnOffAroows();
 
         start();
     }
@@ -121,11 +118,20 @@ public class MainGame extends AppCompatActivity implements SensorEventListener{
         left.setVisibility(View.INVISIBLE);
     }
 
-    public void start(){
-        WindowManager wm=getWindowManager();
-        Display disp= wm.getDefaultDisplay();
-        Point size=new Point();
+    public void start() {
+        WindowManager wm = getWindowManager();
+        Display disp = wm.getDefaultDisplay();
+        Point size = new Point();
         disp.getSize(size);
+        if (Setting.sensorSwitch != null)
+        {
+            if(Setting.sensorSwitch.isChecked())
+                sensorsOn =true;
+            else
+                sensorsOn =false;
+        }
+        if (sensorsOn)
+            turnOffAroows();
         screenHeight=size.y;
         screenWidth= (float) (getResources().getDisplayMetrics().widthPixels * 2 / enemy.length);
         scoreLBL.setText("SCORE: " + score);

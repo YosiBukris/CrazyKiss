@@ -23,15 +23,13 @@ public class Setting extends AppCompatActivity {
         about = findViewById(R.id.AboutBTN1);
         exit = findViewById(R.id.backBTN1);
         sensorSwitch = findViewById(R.id.SwichBTN);
-        sensorsCheck();
-
+        sensorSwitch.setChecked(true);
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToAbout();
             }
         });
-
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,10 +44,4 @@ public class Setting extends AppCompatActivity {
         startActivity(aboutIntent);
     }
 
-    public void sensorsCheck(){
-        if(sensorSwitch.isChecked())
-            MainGame.sensorsOn = true;
-        else
-            MainGame.sensorsOn = false;
-    }
 }
