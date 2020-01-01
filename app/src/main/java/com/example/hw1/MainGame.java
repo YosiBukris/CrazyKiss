@@ -150,7 +150,6 @@ public class MainGame extends AppCompatActivity implements SensorEventListener {
     @Override
     protected void onPause() {
         super.onPause();
-        finish();
         sensorManager.unregisterListener(this);
     }
 
@@ -299,11 +298,6 @@ public class MainGame extends AppCompatActivity implements SensorEventListener {
     public void moveLeft(View view) {
         if (player.getX() >= (getResources().getDisplayMetrics().widthPixels * 0.5 / enemy.length))
             player.setX(player.getX() - getResources().getDisplayMetrics().widthPixels / enemy.length);
-    }
-
-    @Override
-    public void onBackPressed() {
-        finish();
     }
 
     private synchronized void updateScore(View object,ValueAnimator updatedAnimation, int value){
